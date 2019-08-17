@@ -1,0 +1,10 @@
+
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+#player {
+	width: 60%;
+	margin: auto;
+	height: 380px;
+}
