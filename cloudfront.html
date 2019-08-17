@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>CloudFront HLS</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- Video.js build -->
+  <link href="https://vjs.zencdn.net/7.4.1/video-js.min.css" rel="stylesheet">
+  <script src="https://vjs.zencdn.net/7.4.1/video.min.js"></script>
+
+  <!-- Streamroot source handler plugin -->
+  <script src="https://cdn.streamroot.io/videojs-hlsjs-plugin/1/stable/videojs-hlsjs-plugin.js"></script>
+
+  <!-- Streamroot DNA plugin -->
+  <script src="https://cdn.streamroot.io/videojs-hls-dna-plugin/1/stable/videojs-hls-dna-plugin.js#streamrootKey=YOUR_STREAMROOT_KEY"></script>
+
+  <!-- streamroot graph -->
+  <script src="https://tools.streamroot.io/usage-graphs/stable/graphs.js"></script>
+
+  <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body>
+  <h1 class="text-center">CloudFront CDN</h1>
+  <video id="player" class="video-js" controls>
+    <source src="http://wowza-test-cloudfront.streamroot.io/vodOrigin/tos1500.mp4/playlist.m3u8" type="application/x-mpegURL">
+  </video>
+  
+  <!-- Switch to enable/disable P2P upload -->
+  <div style="margin: 40px 30px 10px;">
+    <label class="switch">
+      <input type="checkbox" id="p2p-switch" checked>
+      <span class="slider"></span>
+    </label>
+    <div style="display: inline-grid; margin-left: 8px;">
+      <span>P2P Upload</span>
+      <span style="color: gray; font-size: 13px;">Toggle switch to Enable/Disable P2P upload</span>
+    </div>
+  </div>
+
+  <div id="streamroot-graphs"></div>
+</body>
+</html>

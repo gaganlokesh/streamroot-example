@@ -3,6 +3,10 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 
+.text-center {
+  text-align: center;
+}
+
 #player {
   width: 60%;
   margin: auto;
