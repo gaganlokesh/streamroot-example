@@ -26,6 +26,18 @@
   <video id="player" class="video-js" controls>
     <source src="http://wowza-test-cloudfront.streamroot.io/vodOrigin/tos1500.mp4/playlist.m3u8" type="application/x-mpegURL">
   </video>
+  
+  <!-- Switch to enable/disable P2P upload -->
+  <div style="margin: 40px 30px 10px;">
+    <label class="switch">
+      <input type="checkbox" id="p2p-switch" checked>
+      <span class="slider"></span>
+    </label>
+    <div style="display: inline-grid; margin-left: 8px;">
+      <span>P2P Upload</span>
+      <span style="color: gray; font-size: 13px;">Toggle switch to Enable/Disable P2P upload</span>
+    </div>
+  </div>
 
   <div id="streamroot-graphs"></div>
 </body>
