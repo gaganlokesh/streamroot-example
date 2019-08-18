@@ -24,9 +24,7 @@
 
 <body>
   <h1 class="text-center">CloudFront CDN</h1>
-  <video id="player" class="video-js" controls>
-    <source src="http://wowza-test-cloudfront.streamroot.io/vodOrigin/tos1500.mp4/playlist.m3u8" type="application/x-mpegURL">
-  </video>
+  <video id="player" class="video-js" controls></video>
   
   <!-- Switch to enable/disable P2P upload -->
   <div style="margin: 40px 30px 10px;">
@@ -41,5 +39,9 @@
   </div>
 
   <div id="streamroot-graphs"></div>
+
+  <script type="text/javascript">
+    const contentUrl = "http://wowza-test-cloudfront.streamroot.io/vodOrigin/tos1500.mp4/playlist.m3u8"
+  </script>
 </body>
 </html>

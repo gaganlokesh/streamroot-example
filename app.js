@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function(){
   };
 
   var player = videojs("player", options);
+  player.src(contentUrl);
+
   var p2pSwitch = document.getElementById('p2p-switch');
 
   p2pSwitch.addEventListener('change', (event) => {
