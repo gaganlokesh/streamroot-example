@@ -4,7 +4,9 @@ document.addEventListener('DOMContentLoaded', function(){
     html5: {
       hlsjsConfig: {},
     },
-    dnaConfig: {},
+    dnaConfig: {
+      "contentIdGenerator" : contentIdGenerator
+    },
   };
 
   var player = videojs("player", options);
@@ -21,6 +23,13 @@ document.addEventListener('DOMContentLoaded', function(){
       setP2PConfig(false)
     }
   })
+
+  // Using Content URL path as Content ID for P2P streaming
+  function contentIdGenerator(contentUrl) {
+    var link = document.createElement("a");
+    link.href = contentUrl;
+    return link.pathname;
+  }
 
   function setP2PConfig(value){
     if (Streamroot){
